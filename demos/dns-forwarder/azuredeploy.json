@@ -4,7 +4,7 @@
   "parameters": {
     "vmName": {
       "type": "string",
-      "defaultValue": "dnsproxy",
+      "defaultValue": "dns-forwarder",
       "metadata": {
         "description": "Name of the Virtual Machine."
       }
@@ -76,12 +76,12 @@
   },
   "variables": {
     "ubuntuOSVersion": "18.04-LTS",
-    "asetName": "dnsproxy-avail",
-    "nsgName": "dnsproxy-nsg",
-    "vnetName": "dnsproxy-vnet",
-    "vnetAddressPrefix": "10.0.0.0/8",
-    "subNet1Name": "subnet1",
-    "subNet1Prefix": "10.1.0.0/16",
+    "asetName": "dns-forwarder-avail",
+    "nsgName": "dns-forwarder-nsg",
+    "vnetName": "dns-forwarder-vnet",
+    "vnetAddressPrefix": "10.2.0.0/16",
+    "subNet1Name": "default",
+    "subNet1Prefix": "10.2.0.0/18",
     "storType": "Standard_LRS",
     "location": "[parameters('location')]",
     "nicName": "[concat(parameters('vmName'), '-', 'nic')]",
